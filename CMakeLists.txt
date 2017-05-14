@@ -11,3 +11,10 @@ project(${PROJECT_NAME}
   VERSION ${${PROJECT_NAME}_VERSION}
   LANGUAGES CXX
 )
+
+include(Catch)
+get_catch(VERSION 1.9.3)
+
+if(TARGET Catch::Catch)
+  message(STATUS "Found Catch")
+endif()
