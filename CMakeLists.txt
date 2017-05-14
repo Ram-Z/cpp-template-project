@@ -13,8 +13,14 @@ project(${PROJECT_NAME}
 )
 
 include(Catch)
+include(Trompeloeil)
 get_catch(VERSION 1.9.3)
+get_trompeloeil(VERSION 25)
 
 if(TARGET Catch::Catch)
   message(STATUS "Found Catch")
+endif()
+
+if(TARGET Trompeloeil::Trompeloeil)
+  message(STATUS "Found Trompeloeil")
 endif()
