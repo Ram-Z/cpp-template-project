@@ -12,6 +12,9 @@ project(${PROJECT_NAME}
   LANGUAGES CXX
 )
 
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 include(Catch)
 include(Trompeloeil)
 get_catch(VERSION 1.9.3)
