@@ -1,11 +1,11 @@
 #include <QWidget>
 
-class Mainwindow : public QWidget
-{
+class Mainwindow : public QWidget {
     Q_OBJECT
 
 public:
     explicit Mainwindow(QWidget *parent = 0);
+
     ~Mainwindow() = default;
 
 public slots:
@@ -13,5 +13,4 @@ public slots:
 signals:
 
 private:
-
-}; // class Mainwindow
+};  // class Mainwindow

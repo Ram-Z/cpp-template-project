@@ -2,27 +2,27 @@
 
 #include <factorial.hpp>
 
+#include <QHBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
-#include <QHBoxLayout>
 #include <QPushButton>
 
 Mainwindow::Mainwindow(QWidget *parent)
     : QWidget(parent)
 {
-    auto input = new QLineEdit;
-    auto calculateButton = new QPushButton(tr("&Calculate"));
-    auto label = new QLabel;
+    auto input      = new QLineEdit;
+    auto calcButton = new QPushButton(tr("&Calculate"));
+    auto label      = new QLabel;
 
-    connect(calculateButton, &QPushButton::clicked, [=]() {
+    connect(calcButton, &QPushButton::clicked, [=]() {
         const auto n = input->text().toUInt();
-        auto f = factorial(n);
+        const auto f = factorial(n);
         label->setText(QString::number(f));
     });
 
     auto hlayout = new QHBoxLayout;
     hlayout->addWidget(input);
-    hlayout->addWidget(calculateButton);
+    hlayout->addWidget(calcButton);
 
     auto layout = new QVBoxLayout;
     layout->addWidget(label);
