@@ -15,17 +15,13 @@ project(${PROJECT_NAME}
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-include(Catch)
-include(Trompeloeil)
-get_catch(VERSION 1.9.3)
-get_trompeloeil(VERSION 25)
+option(BUILD_TESTING "Enable testing" ON)
+if(BUILD_TESTING)
+  include(Catch)
+  get_catch(VERSION 1.9.3)
 
-if(TARGET Catch::Catch)
-  message(STATUS "Found Catch")
-endif()
-
-if(TARGET Trompeloeil::Trompeloeil)
-  message(STATUS "Found Trompeloeil")
+  include(Trompeloeil)
+  get_trompeloeil(VERSION 25)
 endif()
 
 add_subdirectory(lib)
