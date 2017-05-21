@@ -10,3 +10,9 @@ target_link_libraries(${_test_target}_tests
   PRIVATE Catch::Catch
   PRIVATE Trompeloeil::Trompeloeil
 )
+
+add_custom_target(${_test_target}_check
+  COMMAND ${_test_target}_tests
+)
+
+add_dependencies(check ${_test_target}_check)

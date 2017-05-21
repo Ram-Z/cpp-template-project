@@ -22,6 +22,8 @@ if(BUILD_TESTING)
 
   include(Trompeloeil)
   get_trompeloeil(VERSION 25)
+
+  add_custom_target(check)
 endif()
 
 add_subdirectory(lib)
