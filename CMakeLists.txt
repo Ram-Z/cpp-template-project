@@ -27,3 +27,4 @@ if(BUILD_TESTING)
 endif()
 
 add_subdirectory(lib)
+add_subdirectory(src)
