@@ -27,3 +27,5 @@ endif()
 if(TARGET Trompeloeil::Trompeloeil)
   message(STATUS "Found Trompeloeil")
 endif()
+
+add_subdirectory(lib)
