@@ -12,6 +12,8 @@ project(${PROJECT_NAME}
   LANGUAGES CXX
 )
 
+include(ClangTools)
+
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
