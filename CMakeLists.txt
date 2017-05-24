@@ -19,7 +19,9 @@ include(ClangTools)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+option(BUILD_SHARED_LIBS "Build shared libraries" ON)
 option(BUILD_TESTING "Enable testing" ON)
+
 if(BUILD_TESTING)
   include(Catch)
   get_catch(VERSION 1.9.3)
