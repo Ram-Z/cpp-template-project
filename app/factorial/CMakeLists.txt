@@ -1,8 +1,12 @@
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 add_executable(qt_app
-  main.cpp
-  Mainwindow.cpp
+  src/main.cpp
+  src/Mainwindow.cpp
+)
+
+target_include_directories(qt_app
+  PRIVATE src
 )
 
 set_target_properties(qt_app PROPERTIES

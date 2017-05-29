@@ -32,5 +32,5 @@ if(BUILD_TESTING)
   add_custom_target(check)
 endif()
 
-add_subdirectory(lib)
-add_subdirectory(src)
+add_subdirectory(lib/factorial)
+add_subdirectory(app/factorial)
