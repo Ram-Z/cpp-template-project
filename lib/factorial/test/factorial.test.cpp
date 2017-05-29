@@ -1,6 +1,6 @@
 #include <catch.hpp>
 
-#include "factorial.hpp"
+#include "factorial/factorial.hpp"
 
 SCENARIO("Factorials are computed")
 {

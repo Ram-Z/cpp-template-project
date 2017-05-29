@@ -1,6 +1,6 @@
 #include "Mainwindow.hpp"
 
-#include <factorial.hpp>
+#include <factorial/factorial.hpp>
 
 #include <QHBoxLayout>
 #include <QLabel>
