@@ -30,7 +30,7 @@ target_link_libraries(qt_app
   PRIVATE qt_app_lib
 )
 
-add_executable(qt_app_test
+add_test_executable(qt_app_test
   test/tests.cpp
   test/Mainwindow.test.cpp
 )
@@ -40,12 +40,6 @@ target_link_libraries(qt_app_test
   PRIVATE Catch::Catch
   PRIVATE Qt5::Test
 )
-
-add_custom_target(qt_app_check
-  COMMAND qt_app_test
-)
-
-add_dependencies(check qt_app_check)
 
 clang_format(qt_app)
 clang_tidy(qt_app)
